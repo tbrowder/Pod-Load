@@ -17,7 +17,7 @@
     "X::Pod::Load::SourceErrors": "lib/X/Pod/Load/SourceErrors.rakumod"
   },
   "resources": [
-    "examples/pod-load-clean.pod6",
+    "examples/pod-load-clean.raku",
     "examples/README.md"
   ],
   "source-url": "https://github.com/JJ/p6-pod-load.git",

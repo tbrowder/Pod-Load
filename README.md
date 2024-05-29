@@ -93,12 +93,10 @@ AUTHOR
 
 
 
-JJ Merelo <jjmerelo@gmail.com>, with help from [Richard Hainsworth]((https://github.com/finanalyst)
+JJ Merelo <jjmerelo@gmail.com>, with help from [Richard Hainsworth](https://github.com/finanalyst)
 
-COPYRIGHT
-=========
-
-AND LICENSE
+COPYRIGHT AND LICENSE
+=====================
 
 Copyright 2018-2020 JJ Merelo
 
