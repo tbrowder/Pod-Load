@@ -16,6 +16,7 @@ Revision history for Pod::Load
           the README.md with cmd: mi6 build; automatic with cmd: mi6 release
     - Changed all .p6 to .raku, perl6 to raku
     - Tweaked docs
+      + added missing description of sub load-pod
 
 2022-02-12  jmerelo  <jmerelo@princess-carolyn>
 

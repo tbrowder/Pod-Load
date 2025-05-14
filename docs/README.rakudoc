@@ -18,11 +18,11 @@ say pod-load(<<EOP).raku;
 EOP
     
 # Read a file handle.
-my $pod = load("file-with.pod6".IO);
+my $pod = load("file-with.rakudoc".IO);
 say $pod.raku; # Process it as a Pod
 
 # Or simply use the file name
-my @pod = load("file-with.pod6");
+my @pod = load("file-with.rakudoc");
 say .raku for @pod;
 
 # Or a string
@@ -37,7 +37,7 @@ say .raku for @pod;
 =DESCRIPTION
 
 Pod::Load is a module with a simple task: obtain the documentation of an
-external file in a standard, straighworward way.
+external file in a standard, straightforward way.
 
 Its mechanism was originally inspired by
 L<C<Pod::To::BigPage>|https://github.com/perl6/perl6-pod-to-bigpage>, from where
@@ -73,6 +73,8 @@ multi sub load(
 
 Loads an IO::Path, returns a Pod.
 
+=head3 sub load-pod
+
 =head2 INSTALL
 
 Do the usual:
@@ -82,7 +84,6 @@ zef install .
 =end code
 
 to install this if you've made any modification.
-
 
 =AUTHOR
 

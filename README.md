@@ -1,5 +1,3 @@
-[![Actions Status](https://github.com/tbrowder/Pod-Load/actions/workflows/linux.yml/badge.svg)](https://github.com/tbrowder/Pod-Load/actions) [![Actions Status](https://github.com/tbrowder/Pod-Load/actions/workflows/macos.yml/badge.svg)](https://github.com/tbrowder/Pod-Load/actions) [![Actions Status](https://github.com/tbrowder/Pod-Load/actions/workflows/windows.yml/badge.svg)](https://github.com/tbrowder/Pod-Load/actions)
-
 NAME
 ====
 
@@ -23,11 +21,11 @@ SYNOPSIS
     EOP
 
     # Read a file handle.
-    my $pod = load("file-with.pod6".IO);
+    my $pod = load("file-with.rakudoc".IO);
     say $pod.raku; # Process it as a Pod
 
     # Or simply use the file name
-    my @pod = load("file-with.pod6");
+    my @pod = load("file-with.rakudoc");
     say .raku for @pod;
 
     # Or a string
@@ -43,7 +41,7 @@ DESCRIPTION
 
 
 
-Pod::Load is a module with a simple task: obtain the documentation of an external file in a standard, straighworward way.
+Pod::Load is a module with a simple task: obtain the documentation of an external file in a standard, straightforward way.
 
 Its mechanism was originally inspired by [`Pod::To::BigPage`](https://github.com/perl6/perl6-pod-to-bigpage), from where the code to use the cache was taken.
 
@@ -76,6 +74,8 @@ multi sub load(
 ```
 
 Loads an IO::Path, returns a Pod.
+
+### sub load-pod
 
 INSTALL
 -------

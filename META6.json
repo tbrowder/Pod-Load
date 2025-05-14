@@ -20,7 +20,7 @@
     "examples/pod-load-clean.raku",
     "examples/README.md"
   ],
-  "source-url": "https://github.com/JJ/p6-pod-load.git",
+  "source-url": "\"https://github.com/JJ/p6-pod-load.git",
   "tags": [
     "Pod",
     "Documentation"
