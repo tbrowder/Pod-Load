@@ -77,6 +77,14 @@ Loads an IO::Path, returns a Pod.
 
 ### sub load-pod
 
+```raku
+sub load-pod(
+    Str $string-with-rakudoc
+) returns Mu
+```
+
+Loads a string with Rakudoc, returns a Pod.
+
 INSTALL
 -------
 

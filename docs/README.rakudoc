@@ -75,6 +75,16 @@ Loads an IO::Path, returns a Pod.
 
 =head3 sub load-pod
 
+=begin code :lang<raku>
+sub load-pod(
+    Str $string-with-rakudoc
+) returns Mu
+=end code
+
+Loads a string with Rakudoc, returns a Pod.
+
+
+
 =head2 INSTALL
 
 Do the usual:
