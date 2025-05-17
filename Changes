@@ -18,6 +18,9 @@ Revision history for Pod::Load
     - Changed all .p6 to .raku, perl6 to raku, .pm6 to .rakumod,
           .pod6 to .rakudoc
     - Tweaked docs
+      + Added note on retaining original name but modernizing internals
+      + Removed the example with the HEREDOC (<<EOP) which doesn't seem to 
+           work
       + added missing description of sub load-pod
 
 2022-02-12  jmerelo  <jmerelo@princess-carolyn>

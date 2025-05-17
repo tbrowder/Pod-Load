@@ -3,7 +3,9 @@ NAME
 
 
 
-Pod::Load - Loads and compiles the Pod documentation of an external file
+Pod::Load - Loads and compiles the Rakudoc documentation of an external file
+
+**Note**: This module's name was chosen before Perl 6 was renamed to Raku and Pod (or Pod6) was renamed to Rakudoc. All internal references should be renamed accordingly, but the module's original name will be retained.
 
 SYNOPSIS
 ========
@@ -13,26 +15,19 @@ SYNOPSIS
     use Pod::Load;
     use X::Pod::Load::SourceErrors;
 
-    # Try to parse a string
-    say pod-load(<<EOP).raku;
-    =head1 Header
-
-    =head2 Another header
-    EOP
-
     # Read a file handle.
-    my $pod = load("file-with.rakudoc".IO);
-    say $pod.raku; # Process it as a Pod
+    my $rakudoc = load("file-with.rakudoc".IO);
+    say $rakudoc.raku; # Process it as a Pod
 
     # Or simply use the file name
-    my @pod = load("file-with.rakudoc");
-    say .raku for @pod;
+    my @rakudoc = load("file-with.rakudoc");
+    say .raku for @rakudoc;
 
     # Or a string
-    @pod = load("=begin pod\nThis could be a comment with C<code>\n=end pod");
+    @rakudoc = load("=begin pod\nThis could be a comment with C<code>\n=end pod");
 
     # Or ditch the scaffolding and use the string directly:
-    @pod = load-pod("This could be a comment with C<code>");
+    @rakudoc = load-pod("This could be a comment with C<code>");
 
     # If there's an error, it will throw X::Pod::Load::SourceErrors
 
@@ -53,7 +48,7 @@ multi sub load(
 ) returns Mu
 ```
 
-Loads a string, returns a Pod object (`$=pod`).
+Loads a string, returns a Rakudoc object (`$=pod`).
 
 ### multi sub load
 
@@ -63,7 +58,7 @@ multi sub load(
 ) returns Mu
 ```
 
-If it's an actual filename, loads a file and returns the pod.
+If it's an actual filename, loads a file and returns the Rakudoc object.
 
 ### multi sub load
 
@@ -73,7 +68,7 @@ multi sub load(
 ) returns Mu
 ```
 
-Loads an IO::Path, returns a Pod.
+Loads an IO::Path, returns a Rakudoc object.
 
 ### sub load-pod
 
@@ -83,7 +78,7 @@ sub load-pod(
 ) returns Mu
 ```
 
-Loads a string with Rakudoc, returns a Pod.
+Loads a string with Rakudoc, returns a Rakudoc object.
 
 INSTALL
 -------
