@@ -5,7 +5,7 @@ NAME
 
 
 
-Pod::Load - Loads and compiles the Rakudoc documentation of an external file
+**Pod::Load** - Loads and compiles the Rakudoc documentation of an external file or a string
 
 **Note**: This module's name was chosen before Perl 6 was renamed to Raku and Pod (or Pod6) was renamed to Rakudoc. All internal references were renamed accordingly, but the module's original name will be retained.
 
