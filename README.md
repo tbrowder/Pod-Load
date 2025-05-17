@@ -19,7 +19,7 @@ SYNOPSIS
 
     # Read a file handle.
     my $rakudoc = load("file-with.rakudoc".IO);
-    say $rakudoc.raku; # Process it as a Pod
+    say $rakudoc.raku; # Process it as a Rakudoc
 
     # Or simply use the file name
     my @rakudoc = load("file-with.rakudoc");
