@@ -83,8 +83,6 @@ sub load-pod(
 
 Loads a string with Rakudoc, returns a Pod.
 
-
-
 =head2 INSTALL
 
 Do the usual:
@@ -102,7 +100,7 @@ L<Richard Hainsworth|https://github.com/finanalyst>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018-2020 JJ Merelo
+Copyright 2018-2025 JJ Merelo
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

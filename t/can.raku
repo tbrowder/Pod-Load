@@ -1,6 +1,4 @@
-#!/usr/bin/env perl6
-
-use v6;
+#!/usr/bin/env raku
 
 for (3, 1..3, "m" ) -> $m {
     .say with $m.?bounds()

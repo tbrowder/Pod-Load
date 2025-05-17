@@ -106,7 +106,7 @@ JJ Merelo <jjmerelo@gmail.com>, with help from [Richard Hainsworth](https://gith
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2018-2020 JJ Merelo
+Copyright 2018-2025 JJ Merelo
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

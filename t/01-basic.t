@@ -1,15 +1,14 @@
-use v6.c;
 use Test;
 use Pod::Load;
 
 constant %tests = {
-    "pod-test.pod6" => /K/,
-    "test.pod6"  => /extension/,
-    "unit.pod6"  => /magicians/,
-    "class.pm6"  => /Hello/,
-    "multi.pod6" => /mortals/,
-    "can.p6"     => /1/,
-    "pod.pod6"   => /Unordered/,
+    "pod-test.rakudoc" => /K/,
+    "test.rakudoc"     => /extension/,
+    "unit.rakudoc"     => /magicians/,
+    "class.rakumod"    => /Hello/,
+    "multi.rakudoc"    => /mortals/,
+    "can.raku"         => /1/,
+    "pod.rakudoc"      => /Unordered/,
 };
 
 sub do-the-test() {

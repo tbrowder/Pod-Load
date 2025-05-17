@@ -5,7 +5,7 @@ Revision history for Pod::Load
     - Changed to mi6 format
       + neatened old * entries with line breaks; fixed some typos
       + removed old mi6 {{$NEXT}} entry at the end of the old change
-        entries
+          entries
       + removed .appveyor.yml file
       + removed 00-meta.t which was failing on Windows
       + removed .github/workflows/test.yaml file
@@ -15,7 +15,8 @@ Revision history for Pod::Load
       + converted old README.md to rakudoc format in docs/README.rakudoc
       + added dist.ini file with settings to rebuild
           the README.md with cmd: mi6 build; automatic with cmd: mi6 release
-    - Changed all .p6 to .raku, perl6 to raku
+    - Changed all .p6 to .raku, perl6 to raku, .pm6 to .rakumod,
+          .pod6 to .rakudoc
     - Tweaked docs
       + added missing description of sub load-pod
 
