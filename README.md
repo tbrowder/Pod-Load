@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/JJ/p6-pod-load/actions/workflows/linux.yml/badge.svg)](https://github.com/JJ/p6-pod-load/actions) [![Actions Status](https://github.com/JJ/p6-pod-load/actions/workflows/macos.yml/badge.svg)](https://github.com/JJ/p6-pod-load/actions) [![Actions Status](https://github.com/JJ/p6-pod-load/actions/workflows/windows.yml/badge.svg)](https://github.com/JJ/p6-pod-load/actions)
+
 NAME
 ====
 
@@ -5,7 +7,7 @@ NAME
 
 Pod::Load - Loads and compiles the Rakudoc documentation of an external file
 
-**Note**: This module's name was chosen before Perl 6 was renamed to Raku and Pod (or Pod6) was renamed to Rakudoc. All internal references should be renamed accordingly, but the module's original name will be retained.
+**Note**: This module's name was chosen before Perl 6 was renamed to Raku and Pod (or Pod6) was renamed to Rakudoc. All internal references were renamed accordingly, but the module's original name will be retained.
 
 SYNOPSIS
 ========
