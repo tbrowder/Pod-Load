@@ -1,19 +1,18 @@
 use Test;
 
-my $str = q:to/HERE/;
+my $s1 = q:to/HERE/;
 =begin rakudoc
 I am fully Rakudoc capable!
 =end rakudoc
 HERE
 
 # create a Rakudoc file with spurt
-
 my $tdir;
 $tdir = "/tmp/mine";
 mkdir "/tmp/mine" unless $tdir.IO.d;
 my $fil = "/tmp/mine/pod";
 unlink $fil if $fil.IO.e;
-spurt $fil.IO, $str;
+spurt $fil.IO, $s1;
 
 my $proc = run "raku", "--doc=Markdown", $fil, :out, :err;
 my $out = $proc.out.slurp(:close);
