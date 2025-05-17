@@ -1,6 +1,6 @@
 use Test;
 
-my $s1 = q:to/HERE/;
+my $str = q:to/HERE/;
 =begin rakudoc
 I am fully Rakudoc capable!
 =end rakudoc
