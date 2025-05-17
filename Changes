@@ -15,13 +15,18 @@ Revision history for Pod::Load
       + converted old README.md to rakudoc format in docs/README.rakudoc
       + added dist.ini file with settings to rebuild
           the README.md with cmd: mi6 build; automatic with cmd: mi6 release
-    - Changed all .p6 to .raku, perl6 to raku, .pm6 to .rakumod,
+    - Changed all .p6 to .raku, perl6 to raku, .pm6 to .rakumod, and
           .pod6 to .rakudoc
     - Tweaked docs
-      + Added note on retaining original name but modernizing internals
-      + Removed the example with the HEREDOC (<<EOP) which doesn't seem to 
-           work
+      + added note on retaining original name but modernizing internals
+      + removed the example with the HEREDOC (<<EOP) which doesn't seem to 
+          work
       + added missing description of sub load-pod
+    - Added new test 4
+      + ensure =begin/=end rakudoc works like =begin/=end pod
+          NOTE: but App::Mi6 does not understand it yet, issue #183 was
+          filed on 2025-05-17
+    - Removed test dependency on Test::META
 
 2022-02-12  jmerelo  <jmerelo@princess-carolyn>
 

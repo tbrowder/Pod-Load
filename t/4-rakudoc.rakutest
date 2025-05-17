@@ -1,0 +1,27 @@
+use Test;
+use Pod::Load;
+
+my $r = q:to/HERE/;
+=begin rakudoc
+I am fully Rakudoc capable!
+=end rakudoc
+HERE
+
+my @rakudoc = load $r;
+my $rakudoc = @rakudoc.head;
+my @s = $rakudoc.contents;
+is @s.elems, 1;
+my $s = @s.head;
+isa-ok $s, Pod::Block::Para;
+say $s;
+say $s.gist;
+my @lines = $s.gist.lines;
+isa-ok @lines, List;
+for @lines.kv -> $i, $v {
+    say "line $i: '$v'";
+}
+my $str = @lines.tail.trim;
+my $exp = "I am fully Rakudoc capable!", 
+is $str, $exp;
+
+done-testing;

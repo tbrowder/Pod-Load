@@ -22,12 +22,11 @@
   ],
   "source-url": "https://github.com/JJ/p6-pod-load.git",
   "tags": [
+    "Rakudoc",
     "Pod",
     "Documentation"
   ],
   "test-depends": [
-    "Test",
-    "Test::META"
   ],
   "version": "0.7.2"
 }
