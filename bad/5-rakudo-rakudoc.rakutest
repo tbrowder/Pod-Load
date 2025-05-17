@@ -1,10 +1,6 @@
 use Test;
 
-my $s1 = q:to/HERE/;
-=begin rakudoc
-I am fully Rakudoc capable!
-=end rakudoc
-HERE
+my $s1 = "=begin rakudoc\nI am fully Rakudoc capable!\n=end rakudoc";
 
 # create a Rakudoc file with spurt
 my $tdir;
