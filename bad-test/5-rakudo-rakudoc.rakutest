@@ -1,0 +1,89 @@
+use Test;
+
+# create a =begin/=end rakudoc file
+my $sR = "=begin rakudoc\nFile with begin/end rakudoc\n=end rakudoc";
+# create a =begin/=end pod file
+my $sP = "=begin pod\nFile with begin/end pod\n=end pod";
+
+# create Rakudoc and Pod files with spurt
+my $tdir;
+$tdir = "/tmp/mine";
+mkdir "/tmp/mine" unless $tdir.IO.d;
+my $fR = "/tmp/mine/my.rakudoc"; # was $f1
+my $fP = "/tmp/mine/my.pod";     # was $f2
+unlink $fR if $fR.IO.e;
+unlink $fP if $fP.IO.e;
+spurt $fR.IO, $sR;
+spurt $fP.IO, $sP;
+
+#=============================================
+# use raku option --doc with both files
+#=============================================
+# rakudoc file $fR
+say "====== --doc option with rakudoc begin/end";
+my $pRd = run "raku", "--doc", $fR, :out, :err;
+my $ERd = $pRd.exitcode;
+my $oRd = $pRd.out.slurp(:close);
+my $eRd = $pRd.err.slurp(:close);
+say "exitcodeRd: $ERd";
+say "outR:\n$oRd";
+say "errR:\n$eRd";
+
+# pod file $fP
+say "====== --doc option with pod begin/end";
+my $pPd = run "raku", "--doc", $fP, :out, :err;
+my $EPd = $pPd.exitcode;
+my $oPd = $pPd.out.slurp(:close);
+my $ePd = $pPd.err.slurp(:close);
+say "exitcodePd: $EPd";
+say "outP:\n$oPd";
+say "errP:\n$ePd";
+
+#=============================================
+# use raku option --rakudoc with both files
+#=============================================
+# rakudoc file $fR
+say "====== --rakudoc option with rakudoc begin/end";
+my $pRr = run "raku", "--rakudoc", $fR, :out, :err;
+my $ERr = $pRr.exitcode;
+my $oRr = $pRr.out.slurp(:close);
+my $eRr = $pRr.err.slurp(:close);
+say "exitcodeRr: $ERr";
+say "outRr:\n$oRr";
+say "errRr:\n$eRr";
+
+# pod file $fP
+say "====== --rakudoc option with pod begin/end";
+my $pPr = run "raku", "--rakudoc", $fP, :out, :err;
+my $EPr = $pPr.exitcode;
+my $oPr = $pPr.out.slurp(:close);
+my $ePr = $pPr.err.slurp(:close);
+say "exitcodePr: $EPr";
+say "outPr:\n$oPr";
+say "errPr:\n$ePr";
+
+done-testing;
+
+
+
+=finish
+lives-ok {
+}
+my @rakudoc = load $r;
+my $rakudoc = @rakudoc.head;
+my @s = $rakudoc.contents;
+is @s.elems, 1;
+my $s = @s.head;
+isa-ok $s, Pod::Block::Para;
+say $s;
+say $s.gist;
+my @lines = $s.gist.lines;
+isa-ok @lines, List;
+for @lines.kv -> $i, $v {
+    say "line $i: '$v'";
+}
+my $str = @lines.tail.trim;
+my $exp = "I am fully Rakudoc capable!", 
+is $str, $exp;
+
+done-testing;

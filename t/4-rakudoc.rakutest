@@ -3,7 +3,7 @@ use Pod::Load;
 
 my $r = q:to/HERE/;
 =begin rakudoc
-I am fully Rakudoc capable!
+I am fully Rakudoc capable, but Raku is NOT!
 =end rakudoc
 HERE
 
@@ -21,7 +21,7 @@ for @lines.kv -> $i, $v {
     say "line $i: '$v'";
 }
 my $str = @lines.tail.trim;
-my $exp = "I am fully Rakudoc capable!", 
+my $exp = "I am fully Rakudoc capable, but Raku is NOT!";
 is $str, $exp;
 
 done-testing;

@@ -1,5 +1,7 @@
 =begin pod
 
+# Note: =begin/=end rakudoc is not yet handled properly by Raku.
+
 =TITLE Debugging
 
 =SUBTITLE Modules and applications used to debug Raku programs

@@ -24,8 +24,9 @@ Revision history for Pod::Load
       + added missing description of sub load-pod
     - Added new test 4
       + ensure =begin/=end rakudoc works like =begin/=end pod
-          NOTE: but App::Mi6 does not understand it yet, issue #183 was
-          filed on 2025-05-17
+        This module can load such pod okay, but Raku cannot yet handle it.
+    - Added bad-test/ 5-rakudo-rakudoc.rakutest for future use when Raku can 
+        handle =begin/=end rakudoc delimeters.
     - Removed test dependency on Test::META
 
 2022-02-12  jmerelo  <jmerelo@princess-carolyn>
